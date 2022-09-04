@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title%}
+<h1> Hello {{role}}: {{firstName}} {{lestName}}</h1>
+<h2> welcome to mashov</h2>
+{% comment %} {% endblock %} {% endcomment %}
+
+<head>
+</head>
+{% comment %} {% block body %} {% endcomment %}
+
+<body>
+    <p>your birthday is: {{bd}}</p>
+    <p>your phone is: {{phone}}</p>
+    <p>your email is: {{email}}</p>
+    <p>your password is: {{password}}</p>
+    <p>your tz is: {{tz}}</p>
+</body>
+{% endblock %}

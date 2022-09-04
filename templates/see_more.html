@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title%}
+<head>
+
+<h1> {{firstName}} {{lestname}} ({{role}})</h1>
+{% comment %} {% endblock %} {% endcomment %}
+</head>
+{% comment %} {% block body %} {% endcomment %}
+
+<body>
+    <p>birthday is: {{bd}}</p>
+    <p>phone is: {{phone}}</p>
+    <p>email is: {{email}}</p>
+    <p>password: you can't see password, but you can change it here 'button' (list_to_do)</p>
+    <p>tz is: {{tz}}</p>
+</body>
+{% endblock %}

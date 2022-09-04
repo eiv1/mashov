@@ -1,0 +1,59 @@
+{{my_name}}
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <link rel = "stylesheet" href="{%static 'css\mashov.css'%}"></link>
+    {% comment %} <link rel = "stylesheet" href="{%static 'JS\display.js'%}"></link> {% endcomment %}
+
+    <header class="my_header">
+        {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" /> {% endcomment %}
+        <a style="margin-top: 40px; padding-left: 10px">Mashov - Manage your school<a>
+        <img class="rightPic" src="{%static 'images\pupils.png'%}"></img>
+    </header>
+    <hr class="style-five">
+    <body>
+        {{messege}}
+        {% block menu %}
+        <nav>
+            <div class="btn-div">
+                {% comment %}{% if user.is_authenticated %}{% endcomment %}
+                {% comment %} <a href="/register" class="button">register</a> {% endcomment %}
+                <a href="/login" class="button">login</a>
+                <a href="/logout" class="button">logout</a>
+                <a href="/see_me" class="button">see me</a>
+                <a href="/addES" class="button">addES (a) </a>
+                <a href="/addP" class="button">addP (a) </a>
+                <a href="/addS" class="button">addS (a) </a>
+                <a href="/display" class="button">display</a>
+                <a href="/messeges" class="button">messeges (es/a/m) </a>
+                <a href="/see_messeges" class="button">see messeges (s/p) </a>
+                <a href="/statistica" class="button">statistica </a>
+
+                {% comment %} {% else %} {% endcomment %}
+                {% comment %} <a href="/see_messeges" class="button">see messeges for s/p </a> {% endcomment %}
+
+                {% comment %} {% endif %} {% endcomment %}
+            </div>
+        </nav>
+        {% endblock %}
+
+        {% block title %}       {% endblock %}
+
+        {% block form %}         {% endblock %}
+
+        {% block table %}       {% endblock %}
+    </body>
+</html>
+
+
+
+{% comment %} {% if user.is_authenticated %}
+        <li>Hi {{user.first_name}}</li>
+        <li><a href="/mainMenu/add/">Add expense</a></li>
+        <li><a href="/mainMenu/display/">Display page</a></li>
+        <li><a href="/mainMenu/analysis/">Analysis page</a></li>
+        <li><a href="/mainMenu/logout/">Logout</a></li>
+        {% else %}
+        <li><a href="/mainMenu/login/">Login</a></li>
+        <li><a href="/mainMenu/signup/">Signup</a></li>
+        {% endif %} {% endcomment %}
